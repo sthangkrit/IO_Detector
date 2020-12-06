@@ -9,27 +9,27 @@ COPY requirements.txt /tmp/requirements.txt
 
 # Install all needed packages
 RUN apk add --no-cache \
-    python2 \
+    python3 \
     bash \
     nginx \
     uwsgi \
     uwsgi-python \
     supervisor && \
-    python2 -m ensurepip && \
+    python3 -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
-    pip2 install --upgrade pip setuptools && \
-    pip2 install -r /tmp/requirements.txt && \
+    pip3 install --upgrade pip setuptools && \
+    pip3 install -r /tmp/requirements.txt && \
     rm /etc/nginx/conf.d/default.conf && \
     rm -r /root/.cache && \
-    mkdir /kubyk
+    mkdir /IO_PROJECT
 
 
 # Copy the application files
-COPY ./app /kubyk/app
-COPY ./kubyk.py config.py /kubyk/
+COPY ./app /IO_PROJECT/app
+COPY ./io.py config.py /IO_PROJECT/
 
 # Copy Sqlite base with users data
-COPY ./sqlite /kubyk/sqlite
+COPY ./sqlite /IO_PROJECT/sqlite
 
 # Copy Nginx default config
 COPY nginx.conf /etc/nginx/
