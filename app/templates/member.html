@@ -54,7 +54,38 @@
           <h1 class="display-4"><img alt="WebUI" src="{{url_for('.static', filename='cs100.png')}}" align="left">Computer Science</h1>
         </br>
           <p class="lead">King Mongkut's Institute of Technology Ladkrabang<br><br>
-            The IO Detector for analyze IO from twitter.</p>
+            <h3>Create by</h3>
+            <table style="border-collapse: collapse; width: 99.4819%; height: 127px;" border="0">
+                <tbody>
+                    <tr style="height: 17px;">
+                        <td style="width: 11.8924%; height: 17px;"><strong>1.</strong> Mr. Thanatorn</td>
+                        <td style="width: 12.2396%;">Songsyom</td>
+                        <td style="width: 75.868%; height: 17px;"><strong>Student id:</strong> 61050190</td>
+                    </tr>
+                    <tr style="height: 17px;">
+                        <td style="width: 11.8924%; height: 17px;"><strong>2.</strong> Mr. Tanapon</td>
+                        <td style="width: 12.2396%;">Krittinaddakul</td>
+                        <td style="width: 75.868%; height: 17px;"><strong>Student id:</strong> 61050192</td>
+                    </tr>
+                    <tr style="height: 17px;">
+                        <td style="width: 11.8924%; height: 17px;"><strong>3.</strong> Mr. Supawich</td>
+                        <td style="width: 12.2396%;">Romyanon</td>
+                        <td style="width: 75.868%; height: 17px;"><strong>Student id:</strong> 61050296</td>
+                    </tr>
+                    <tr style="height: 17px;">
+                        <td style="width: 11.8924%; height: 17px;"><strong>4.</strong> Mr. Suthiwat</td>
+                        <td style="width: 12.2396%;">Thepsorn</td>
+                        <td style="width: 75.868%; height: 17px;"><strong>Student id:</strong> 61050309</td>
+                    </tr>
+                    <tr style="height: 17px;">
+                        <td style="width: 11.8924%; height: 17px;"><strong>5.</strong> Mr. Anapat</td>
+                        <td style="width: 12.2396%;">Khumdang</td>
+                        <td style="width: 75.868%; height: 17px;"><strong>Student id:</strong> 61050314</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </p>
         </div>
         
    </div>
@@ -63,72 +94,7 @@
    
  <div class="row">
   
-
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-3 mb-3"></div>
-          <div class="col-lg-6 col-md-6 mb-6">  
-           <div class="card card-login mx-auto mt-6">
-             <div class="card-header">
-               <img alt="Comsci" src="{{url_for('.static', filename='cs50.png')}}" align="center" >
-               IO Detector
-             </div>
-             <div class="card-body">
-               <form form action="{{ url_for('index') }}" method="POST">
-                 {% if error  %}
-                 <div class="alert alert-warning">
-                   <strong>Warning!</strong> {{ error }}
-                 </div>
-                 {% endif %}
-                 {{ form.hidden_tag() }}
-                 <div class="form-group">
-                   <label for="Tweet Text">Tweet Text</label>
-                     {{ form.tweet_text(class_="form-control", placeholder="Tweet Text", id="tweet_text") }}
- 
-                 </div>
-                 <div class="form-group">
-                   <label for="location">Location</label>
-                     {{ form.location(class_="form-control", placeholder="Location", id="location") }}
-                   </div>
-                 <div>
-                 <div class="form-group">
-                   <label for="description">Description</label>
-                     {{ form.description(class_="form-control", placeholder="Description", id="description") }}
-                   </div>
-
-                   
-                 <div>
-                  <div class="form">
-                    <label for="description">This Tweet is IO ? </label> <br>
-                    {% with messages = get_flashed_messages() %}
-                    {% if messages %}
-                      <ul class=flashes>
-                      {% for message in messages %}
-                        <li>
-                          <p><span style="color: #ff0000;">{{message}}</span></p>
-                        </li>
-                      {% endfor %}
-                      </ul>
-                    {% endif %}
-                  {% endwith %}
-                    <!-- <label for="description">IO ISUD </label> <br> -->
-
-                    </div>
-                  <div>
-                  <div>
-                   <button class="btn btn-primary btn-block" value=index type="submit">Analyze</button>
-                   <a href="/" class="btn btn-secondary btn-block" role="button" aria-pressed="true">Clear</a>
-                 </div>
-               </form>
-             </div>
-           </div>
-           <!-- </div> -->
-           
-          </div>
-          </div> 
-          </div>
-        
-        
+   
 
 
    </div>
