@@ -5,3 +5,5 @@ Flask-WTF
 SQLAlchemy
 flask_sqlalchemy
 config
+pythainlp
+pandas

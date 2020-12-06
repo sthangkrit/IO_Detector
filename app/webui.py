@@ -1,4 +1,6 @@
 import os
+from Naivebayes import Naivebayes as nb
+
 from app import db
 from app import app
 from functools import wraps
@@ -29,8 +31,7 @@ class User(UserMixin, db.Model):
 
 class IndexForm(FlaskForm):
     tweet_text = StringField('Tweet_Text', validators=[InputRequired(), Length(min=2, max=35)]) # NOQA
-    location = StringField('Location', validators=[InputRequired(), Length(min=1, max=80)]) # NOQA
-    description = StringField('Description', validators=[InputRequired(), Length(min=1, max=80)]) # NOQA
+    
 
 
 
@@ -39,26 +40,41 @@ class IndexForm(FlaskForm):
 def index():
     form = IndexForm()
     tweet_text = form.tweet_text.data
-    location = form.location.data
-    description = form.description.data
+    # location = form.location.data
+    # description = form.description.data
     if form.validate_on_submit():
-
-        flash('Is not IO')
-    
         print(tweet_text)
-        print(location)
-        print(description)
+        ans = nb.__init__(tweet_text)
+        print(ans)
 
+        flash(ans)
+        # print(tweet_text)
+     
     return render_template('index.html',form=form) # NOQA
 
 
-@app.route('/dashboard', methods=['GET', 'POST'])
-# @login_required
-def dashboard():
-    return render_template('dashboard.html') # NOQA
+@app.route('/dashboard1', methods=['GET', 'POST'])
+def dashboard1():
+    return render_template('dashboard1.html') # NOQA
+
+@app.route('/dashboard2', methods=['GET', 'POST'])
+def dashboard2():
+    return render_template('dashboard2.html') # NOQA
+
+@app.route('/dashboard3', methods=['GET', 'POST'])
+def dashboard3():
+    return render_template('dashboard3.html') # NOQA
+
+@app.route('/dashboard4', methods=['GET', 'POST'])
+def dashboard4():
+    return render_template('dashboard4.html') # NOQA
+
+@app.route('/dashboard5', methods=['GET', 'POST'])
+def dashboard5():
+    return render_template('dashboard5.html') # NOQA
 
 @app.route('/member', methods=['GET', 'POST'])
-# @login_required
+
 def member():
     return render_template('member.html') # NOQA
 

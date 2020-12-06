@@ -20,8 +20,6 @@
             <span class="nav-link-text">IO Detector</span>
           </a>
         </li>
-        
-
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#Charts" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-area-chart"></i>
@@ -29,26 +27,20 @@
           </a>
           <ul class="sidenav-second-level collapse" id="Charts">
             <li>
-              <a href="/dashboard1">Top 10 IO Tweet</a>
-              <a href="/dashboard2">Top 10 IO Location </a>
-              <a href="/dashboard3">Top 10 IO Profile description</a>
-              <a href="/dashboard4">Top 10 IO Tweet pattern and aspect</a>
-              <a href="/dashboard5">Top 10 IO Most used word</a>
+                <a href="/dashboard1">Top 10 IO Tweet</a>
+                <a href="/dashboard2">Top 10 IO Location </a>
+                <a href="/dashboard3">Top 10 IO Profile description</a>
+                <a href="/dashboard4">Top 10 IO Tweet pattern and aspect</a>
+                <a href="/dashboard5">Top 10 IO Most used word</a>
             </li>
           </ul>
         </li>
-
-
-
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Members">
           <a class="nav-link" href="/member">
             <i class="fa fa-fw fa-address-book"></i>
             <span class="nav-link-text">Members</span>
           </a>
         </li>
-
-      
-
       </ul>
 
       <!-- LEFT Bar expand -->
@@ -71,64 +63,40 @@
           <h1 class="display-4"><img alt="WebUI" src="{{url_for('.static', filename='cs100.png')}}" align="left">Computer Science</h1>
         </br>
           <p class="lead">King Mongkut's Institute of Technology Ladkrabang<br><br>
-            The IO Detector for analysis IO from twitter please insert text from tweet for detect IO.</p>
+            Top location of Operation of IO.</p>
         </div>
         
    </div>
 
    
    
-  <div class="row">
-    <div class="container">
-      <div class="row">
-          <div class="col-lg-3 col-md-3 mb-3"></div>
-             <div class="col-lg-6 col-md-6 mb-6">  
-              <div class="card card-login mx-auto mt-6">
-                  <div class="card-header">
-         <img alt="Comsci" src="{{url_for('.static', filename='cs50.png')}}" align="center" >
-         IO Detector
-       </div>
-
-       <div class="card-body">
-        <form form action="{{ url_for('index') }}" method="POST">
-          {% if error  %}
-          <div class="alert alert-warning">
-            <strong>Warning!</strong> {{ error }}
-          </div>
-          {% endif %}
-                 {{ form.hidden_tag() }}
-                 <div class="form-group">
-                   <label for="Tweet Text">Tweet Text</label>
-                     {{ form.tweet_text(class_="form-control", placeholder="Tweet Text", id="tweet_text") }}
- 
-                 </div>
-                 <div>
-                  <div class="form">
-                    <label for="IO">This Tweet is IO ? </label> <br>
-                    {% with messages = get_flashed_messages() %}
-                    {% if messages %}
-                      <ul class=flashes>
-                      {% for message in messages %}
-                        <li>
-                          <p><span style="color: #ff0000;">{{message}}</span></p>
-                        </li>
-                      {% endfor %}
-                      </ul>
-                    {% endif %}
-                  {% endwith %}
-                    <!-- <label for="description">IO ISUD </label> <br> -->
-                    </div>
-
-                    <div>
-                      <button class="btn btn-primary btn-block" value=index type="submit">Analyze</button>
-                      <a href="/" class="btn btn-secondary btn-block" role="button" aria-pressed="true">Clear</a>
-                    </div>
-        </form>
-            </div>
-          </div>
-      </div>
-      </div>
+ <div class="row">
+  
+    <script type='text/javascript' src='https://prod-apsoutheast-a.online.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1536px; height: 669px;'><object class='tableauViz' width='1536' height='669' style='display:none;'><param name='host_url' value='https%3A%2F%2Fprod-apsoutheast-a.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;iodetector' /><param name='name' value='dash_3&#47;Sheet3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /></object></div>
     </div>
+</div>
+  </div>
+</div>
+        
+
+
+   </div>
+
+      
+   </div>
+    <footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+          <small>Copyright © Alexey Nizhegolenko 2018 / Or put what you want here, it under MIT license.</small>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+  
+  
   </div>
 </body>
 {% endblock %}

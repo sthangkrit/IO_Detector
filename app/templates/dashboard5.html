@@ -21,11 +21,20 @@
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="/dashboard">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#Charts" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-area-chart"></i>
             <span class="nav-link-text">Charts</span>
           </a>
-        </li></li>
+          <ul class="sidenav-second-level collapse" id="Charts">
+            <li>
+                <a href="/dashboard1">Top 10 IO Tweet</a>
+                <a href="/dashboard2">Top 10 IO Location </a>
+                <a href="/dashboard3">Top 10 IO Profile description</a>
+                <a href="/dashboard4">Top 10 IO Tweet pattern and aspect</a>
+                <a href="/dashboard5">Top 10 IO Most used word</a>
+            </li>
+          </ul>
+        </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Members">
           <a class="nav-link" href="/member">
             <i class="fa fa-fw fa-address-book"></i>
@@ -54,7 +63,7 @@
           <h1 class="display-4"><img alt="WebUI" src="{{url_for('.static', filename='cs100.png')}}" align="left">Computer Science</h1>
         </br>
           <p class="lead">King Mongkut's Institute of Technology Ladkrabang<br><br>
-            Charts analyze IO from twitter Thailand.</p>
+            Top 10 most word was used by IO.</p>
         </div>
         
    </div>
@@ -63,19 +72,14 @@
    
  <div class="row">
   
-  <script type='text/javascript' src='https://prod-apsoutheast-a.online.tableau.com/javascripts/api/viz_v1.js'>
-  </script>
-  <div class='tableauPlaceholder' style='width: 1400; height: 827px;'>
-    <object class='tableauViz' width='1436' height='827' style='display:none;'>
-      <param name='host_url' value='https%3A%2F%2Fprod-apsoutheast-a.online.tableau.com%2F' /> 
-      <param name='embed_code_version' value='3' /> 
-      <param name='site_root' value='&#47;t&#47;iodetector' />
-      <param name='name' value='dash4&#47;Dashboard2' />
-      <param name='tabs' value='no' />
-      <param name='toolbar' value='yes' />
-      <param name='showAppBanner' value='false' />
-    </object>
-  </div>
+    <script type='text/javascript' src='https://prod-apsoutheast-a.online.tableau.com/javascripts/api/viz_v1.js'>
+    </script><div class='tableauPlaceholder' style='width: 1100; height: 669px;'>
+    <object class='tableauViz' width='1250' height='669' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fprod-apsoutheast-a.online.tableau.com%2F' /> 
+        <param name='embed_code_version' value='3' /> 
+        <param name='site_root' value='&#47;t&#47;iodetector' />
+        <param name='name' value='dash_3&#47;Sheet6' />
+        <param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /></object></div>  </div>
 </div>
         
 
