@@ -7,3 +7,4 @@ flask_sqlalchemy
 config
 pythainlp
 pandas
+gunicorn
