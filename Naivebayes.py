@@ -11,7 +11,7 @@ import pythainlp as nlp
 class Naivebayes:
     def __init__(twt_text):
         print('fffffffff')
-        data = pd.read_csv(r'C:\Users\61050192\Desktop\io_project\Word_io_contingency.csv')
+        data = pd.read_csv(r'./Word_io_contingency.csv')
         w = nlp.word_tokenize(twt_text,engine='newmm',keep_whitespace=False)
         prob_Y = float(0.49561973)
         prob_N = float(0.50438027)
