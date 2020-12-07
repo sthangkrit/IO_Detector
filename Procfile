@@ -1,1 +1,1 @@
-web: python -m pip install -r requirements.txt && gunicorn io:app 
+web: gunicorn io:app 
